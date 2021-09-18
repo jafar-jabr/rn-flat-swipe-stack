@@ -1,6 +1,6 @@
 {
   "name": "rn-flat-swipe-stack",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React native horizontally swipe stack",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
