@@ -1,5 +1,5 @@
-# rn-flat-swipe-stack
-> react native Horizontally swipeable views stack.
+# rn-flat-swipe-stack [![npm version](https://badge.fury.io/js/rn-flat-swipe-stack.svg)](https://badge.fury.io/js/rn-flat-swipe-stack)
+> react native horizontally swipeable views stack.
 
 ## Installation
 
@@ -12,7 +12,7 @@ __Import__
 ```js
 import FlatSwipeStack from 'rn-flat-swipe-stack';
 ```
-__Basic Usage__
+__Usage Example:__
 ```jsx
 export default function App() {
   const [swipedIndex, setSwipedIndex] = useState(0);
