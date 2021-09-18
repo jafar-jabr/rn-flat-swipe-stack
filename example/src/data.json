@@ -11,7 +11,7 @@
   "earth_date": "2015-05-30",
   "rover": {
     "id": 5,
-    "name": "Curiosity",
+    "name": "Curiosity 1",
     "landing_date": "2012-08-06",
     "launch_date": "2011-11-26",
     "status": "active"
@@ -29,7 +29,7 @@
   "earth_date": "2015-05-30",
   "rover": {
     "id": 5,
-    "name": "Curiosity",
+    "name": "Curiosity 2",
     "landing_date": "2012-08-06",
     "launch_date": "2011-11-26",
     "status": "active"
@@ -47,7 +47,7 @@
   "earth_date": "2015-05-30",
   "rover": {
     "id": 5,
-    "name": "Curiosity",
+    "name": "Curiosity 3",
     "landing_date": "2012-08-06",
     "launch_date": "2011-11-26",
     "status": "active"

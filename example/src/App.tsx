@@ -1,5 +1,6 @@
-import { Image, StyleSheet, Text, View } from 'react-native';
-// import FlatSwipeStack from 'rn-flat-swipe-stack';
+/* eslint-disable react/react-in-jsx-scope */
+import { Image, StyleSheet, Text, View, Dimensions } from 'react-native';
+import FlatSwipeStack from 'rn-flat-swipe-stack';
 import { doFormat } from 'date-dealer';
 import { default as data } from './data.json';
 import { useEffect, useState } from 'react';
@@ -8,7 +9,6 @@ export default function App() {
   const [swipedIndex, setSwipedIndex] = useState(0);
   useEffect(() => {
     console.log(`current index ${swipedIndex}`);
-    console.warn(JSON.stringify(data));
   }, [swipedIndex]);
 
   const renderViewItem = (item: {
@@ -32,15 +32,14 @@ export default function App() {
   );
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Hello</Text>
-      {/*<FlatSwipeStack*/}
-      {/*  onSwipe={setSwipedIndex}*/}
-      {/*  data={data}*/}
-      {/*  renderItem={renderViewItem}*/}
-      {/*  stackSpacing={20}*/}
-      {/*  swipeDuration={500}*/}
-      {/*  swipeThreshold={60}*/}
-      {/*/>*/}
+      <FlatSwipeStack
+        data={data}
+        onSwipe={setSwipedIndex}
+        renderItem={renderViewItem}
+        stackSpacing={20}
+        swipeDuration={500}
+        swipeThreshold={60}
+      />
     </View>
   );
 }
@@ -48,12 +47,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   item: {
-    width: '100%',
-    height: '90%',
+    width: Dimensions.get('screen').width,
+    height: Dimensions.get('screen').height - 140,
   },
   imageWrapper: {
     marginLeft: 'auto',
@@ -64,13 +61,16 @@ const styles = StyleSheet.create({
   image: {
     borderRadius: 10,
     flex: 1,
+    width: '100%',
+    height: '100%',
   },
   body: {
+    flex: 1,
     flexDirection: 'column',
     position: 'absolute',
     top: '2%',
     left: '10%',
-    width: '80%',
+    width: '90%',
     marginLeft: 'auto',
     marginRight: 'auto',
     paddingHorizontal: 16,

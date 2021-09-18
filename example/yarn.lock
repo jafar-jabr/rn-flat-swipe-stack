@@ -1537,10 +1537,10 @@ cross-spawn@^6.0.0:
     shebang-command "^1.2.0"
     which "^1.2.9"
 
-date-dealer@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/date-dealer/-/date-dealer-3.0.1.tgz#58acb38ccedf47b52dc90b2da1bc3d5131296c81"
-  integrity sha512-zzTyA+R/KpqnfiYXkmi1SE+P2VIUhAWAUWaenUHDjbfEUdkOKfkQjNW7BrY8sVX/7DbHKns9SB3ZRfClmzkgXQ==
+date-dealer@3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/date-dealer/-/date-dealer-3.0.2.tgz#20933fcb73367d439452f85866a4ea92e9a05c67"
+  integrity sha512-e3yuHAMTclxxAo+4In50tqZISMZZwCB/+HnmA3PA+I7TreYx5qXqefoOx34QnOgtMOp0+K+hr/AD08WVl3KO8Q==
 
 dayjs@^1.8.15:
   version "1.10.7"
@@ -3467,6 +3467,10 @@ rimraf@~2.2.6:
   version "2.2.8"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.2.8.tgz#e439be2aaee327321952730f99a8929e4fc50582"
   integrity sha1-5Dm+Kq7jJzIZUnMPmaiSnk/FBYI=
+
+"rn-flat-swipe-stack@https://github.com/jafar-jabr/rn-flat-swipe-stack":
+  version "0.1.0"
+  resolved "https://github.com/jafar-jabr/rn-flat-swipe-stack#921c59deca105a246dd0a4b0e72cb1a455bed451"
 
 rsvp@^4.8.4:
   version "4.8.5"

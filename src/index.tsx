@@ -1,22 +1,22 @@
-import { Dispatch, SetStateAction, useRef } from 'react';
+import { useRef } from 'react';
 import { View, PanResponder, Animated, Platform } from 'react-native';
 
 type PropsTypes = {
-  stackSpacing: number;
-  onSwipe: Dispatch<SetStateAction<number>>;
   data: any[];
   renderItem: (data: any) => JSX.Element;
-  swipeThreshold: number;
-  swipeDuration: number;
+  onSwipe: (currentIndex: number) => void;
+  stackSpacing?: number;
+  swipeThreshold?: number;
+  swipeDuration?: number;
 };
 
 const FlatSwipeStack = ({
   data,
-  onSwipe,
-  stackSpacing,
   renderItem,
-  swipeThreshold,
-  swipeDuration,
+  onSwipe,
+  stackSpacing = 20,
+  swipeThreshold = 60,
+  swipeDuration = 500,
 }: PropsTypes) => {
   const viewPan = useRef(new Animated.ValueXY()).current;
   const viewStackedAnim = useRef(new Animated.Value(0)).current;
@@ -26,7 +26,7 @@ const FlatSwipeStack = ({
       currentStackedViewIndex.current + 1,
       data.length - 1
     );
-    if (index === data.length - 1) {
+    if (currentStackedViewIndex.current === data.length - 1) {
       return 0;
     }
     return index;
@@ -37,11 +37,8 @@ const FlatSwipeStack = ({
       currentStackedViewIndex.current + 2,
       data.length - 1
     );
-    if (index === data.length - 1) {
+    if (nIndex === data.length - 1) {
       return 0;
-    }
-    if (index === currentStackedViewIndex.current) {
-      return nIndex;
     }
     return index;
   };
@@ -140,8 +137,11 @@ const FlatSwipeStack = ({
   );
 
   return (
-    <View style={{ paddingTop: stackSpacing * 3 + 20, alignItems: 'center' }}>
-      <LastView />
+    <View
+      style={{ paddingTop: stackSpacing * 3 + 20, alignItems: 'center' }}
+      key={`${currentStackedViewIndex.current}_parent`}
+    >
+      {data.length > 2 && <LastView />}
       {data[nextIndex()] && (
         <Animated.View
           key={`${data[nextIndex()]?.id}`}
