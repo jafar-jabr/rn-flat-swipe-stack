@@ -1,6 +1,10 @@
 # rn-flat-swipe-stack [![npm version](https://badge.fury.io/js/rn-flat-swipe-stack.svg)](https://badge.fury.io/js/rn-flat-swipe-stack)
 > react native horizontally swipeable views stack.
 
+## Swipeable React Native components stack
+![Alt text](https://gtonspit.sirv.com/Images/rn-flat-swipe-stack.gif "rn-flat-swipe-stack")
+
+
 ## Installation
 
 ```sh
