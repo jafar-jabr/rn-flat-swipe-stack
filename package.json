@@ -10,16 +10,16 @@
   "files": [
     "src",
     "lib",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__",
     "android",
     "ios",
     "cpp",
     "rn-flat-swipe-stack.podspec",
     "!lib/typescript/example",
     "!android/build",
-    "!ios/build",
-    "!**/__tests__",
-    "!**/__fixtures__",
-    "!**/__mocks__"
+    "!ios/build"
   ],
   "scripts": {
     "test": "jest",
@@ -50,6 +50,7 @@
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^11.0.0",
+    "@react-native-community/bob": "^0.17.1",
     "@react-native-community/eslint-config": "^2.0.0",
     "@release-it/conventional-changelog": "^2.0.0",
     "@types/jest": "^26.0.0",
@@ -144,6 +145,15 @@
           "project": "tsconfig.build.json"
         }
       ]
+    ]
+  },
+  "@react-native-community/bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      "typescript"
     ]
   }
 }
