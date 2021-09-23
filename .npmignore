@@ -4,4 +4,3 @@ check
 .circleci
 example
 node_modules
-lib
